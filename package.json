@@ -1,15 +1,35 @@
 {
-  "name": "apinova",
+  "name": "api-rest-completa",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "API REST completa com Node.js e Express",
+  "main": "src/app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js",
+    "test": "jest",
+    "migrate": "sequelize-cli db:migrate",
+    "seed": "sequelize-cli db:seed:all"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^5.1.0"
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "helmet": "^6.0.1",
+    "joi": "^17.7.0",
+    "jsonwebtoken": "^9.0.0",
+    "mysql2": "^3.2.0",
+    "sequelize": "^6.30.0",
+    "stripe": "^11.12.0",
+    "winston": "^3.8.2"
+  },
+  "devDependencies": {
+    "jest": "^29.4.3",
+    "nodemon": "^3.1.9",
+    "sequelize-cli": "^6.5.2",
+    "supertest": "^6.3.3"
   }
 }
